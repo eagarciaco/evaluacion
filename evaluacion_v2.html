@@ -122,7 +122,7 @@
   <div class="card">
     <div id="form-content">
       <h1>🚀 Feedback de Presentación</h1>
-      <p class="intro">Tu opinión honesta ayuda a mejorar. ¡Gracias!</p>
+      <p class="intro">Tu retroalimentación ayuda a mejorar. ¡Gracias por participar!</p>
 
       <form id="feedback-form" action="https://script.google.com/macros/s/AKfycbyzrFXeQhZotVqtGUqwPt3QJXBCjRklp7ms4Mka0Wg9dKsR2wPjLp9xB8m8mw8a3aumgw/exec" method="POST">
         
@@ -131,10 +131,10 @@
 
         <div class="section-header">
           <div class="section-badge">01</div>
-          <div class="section-title">Diseño Visual</div>
+          <div class="section-title">Diseño y Visualización</div>
         </div>
         
-        <label class="question-label">🎨 Color y Contraste</label>
+        <label class="question-label">🎨 Uso de Color y Contraste</label>
         <span class="helper-text">¿Facilitaron la lectura o fueron distractores?</span>
         <div class="scale-container">
           <div class="scale-option"><input type="radio" name="color" value="1" required><div class="scale-label">1</div></div>
@@ -144,8 +144,8 @@
           <div class="scale-option"><input type="radio" name="color" value="5"><div class="scale-label">5</div></div>
         </div>
 
-        <label class="question-label">📐 Equilibrio y Legibilidad (Fusión)</label>
-        <span class="helper-text">¿Jerarquía clara y cantidad de texto adecuada? (1=Saturado/Caótico, 5=Limpio/Claro)</span>
+        <label class="question-label">📐 Equilibrio y Legibilidad</label>
+        <span class="helper-text">¿Jerarquía clara y cantidad de texto adecuada? (1=Caótico, 5=Perfecto)</span>
         <div class="scale-container">
           <div class="scale-option"><input type="radio" name="legibilidad" value="1" required><div class="scale-label">1</div></div>
           <div class="scale-option"><input type="radio" name="legibilidad" value="2"><div class="scale-label">2</div></div>
@@ -154,13 +154,22 @@
           <div class="scale-option"><input type="radio" name="legibilidad" value="5"><div class="scale-label">5</div></div>
         </div>
 
+        <label class="question-label">🖼️ Calidad de Gráficos e Imágenes</label>
+        <span class="helper-text">¿Eran nítidos y aportaban valor al tema?</span>
+        <div class="scale-container">
+          <div class="scale-option"><input type="radio" name="graficos" value="1" required><div class="scale-label">1</div></div>
+          <div class="scale-option"><input type="radio" name="graficos" value="2"><div class="scale-label">2</div></div>
+          <div class="scale-option"><input type="radio" name="graficos" value="3"><div class="scale-label">3</div></div>
+          <div class="scale-option"><input type="radio" name="graficos" value="4"><div class="scale-label">4</div></div>
+          <div class="scale-option"><input type="radio" name="graficos" value="5"><div class="scale-label">5</div></div>
+        </div>
+
         <div class="section-header">
           <div class="section-badge">02</div>
           <div class="section-title">El Ponente y el Mensaje</div>
         </div>
 
         <label class="question-label">🎤 Dominio y Seguridad</label>
-        <span class="helper-text">¿Demostró confianza y conocimiento profundo?</span>
         <div class="scale-container">
           <div class="scale-option"><input type="radio" name="dominio" value="1" required><div class="scale-label">1</div></div>
           <div class="scale-option"><input type="radio" name="dominio" value="2"><div class="scale-label">2</div></div>
@@ -170,7 +179,6 @@
         </div>
 
         <label class="question-label">🗣️ Claridad y Explicación</label>
-        <span class="helper-text">¿El lenguaje fue fluido y fácil de seguir?</span>
         <div class="scale-container">
           <div class="scale-option"><input type="radio" name="claridad" value="1" required><div class="scale-label">1</div></div>
           <div class="scale-option"><input type="radio" name="claridad" value="2"><div class="scale-label">2</div></div>
@@ -179,8 +187,8 @@
           <div class="scale-option"><input type="radio" name="claridad" value="5"><div class="scale-label">5</div></div>
         </div>
 
-        <label class="question-label">💎 Calidad del Contenido (Nuevo)</label>
-        <span class="helper-text">¿La información fue valiosa, útil y bien estructurada?</span>
+        <label class="question-label">💎 Calidad del Contenido</label>
+        <span class="helper-text">¿La información fue valiosa y bien estructurada?</span>
         <div class="scale-container">
           <div class="scale-option"><input type="radio" name="contenido" value="1" required><div class="scale-label">1</div></div>
           <div class="scale-option"><input type="radio" name="contenido" value="2"><div class="scale-label">2</div></div>
@@ -196,25 +204,25 @@
 
         <div class="kss-box kss-keep">
           <label class="question-label" style="color: var(--accent-green);">🟢 KEEP</label>
-          <textarea name="keep" rows="2" placeholder="¿Qué debe seguir haciendo?"></textarea>
+          <textarea name="keep" rows="2" placeholder="Lo que debe seguir haciendo..."></textarea>
         </div>
 
         <div class="kss-box kss-stop">
           <label class="question-label" style="color: var(--accent-red);">🔴 STOP</label>
-          <textarea name="stop" rows="2" placeholder="¿Qué debería dejar de hacer?"></textarea>
+          <textarea name="stop" rows="2" placeholder="Lo que debería dejar de hacer..."></textarea>
         </div>
 
         <div class="kss-box kss-start">
           <label class="question-label" style="color: var(--accent-blue);">🔵 START</label>
-          <textarea name="start" rows="2" placeholder="¿Qué debería implementar?"></textarea>
+          <textarea name="start" rows="2" placeholder="Lo que debería implementar..."></textarea>
         </div>
 
         <div class="section-header">
           <div class="section-badge" style="background: var(--text-muted);">+</div>
-          <div class="section-title">Extras (Opcional)</div>
+          <div class="section-title">Reporte de Errores y Comentarios</div>
         </div>
-        <label class="question-label">⚠️ Reporte de errores o comentarios</label>
-        <textarea name="errores" rows="3" placeholder="Ej: Error ortográfico en diapo 4, datos desactualizados..."></textarea>
+        <label class="question-label">⚠️ Notas adicionales (Opcional)</label>
+        <textarea name="errores" rows="3" placeholder="Ej: Diapo 4 tiene un error de dedo..."></textarea>
 
         <button type="submit" id="submit-btn" class="submit-btn">Enviar Evaluación 🚀</button>
       </form>
@@ -223,7 +231,7 @@
     <div id="success-message">
       <span class="success-icon">🎉</span>
       <h2>¡Evaluación Enviada!</h2>
-      <p>Gracias por ayudar al ponente a mejorar con tu feedback.</p>
+      <p>Tu feedback ha sido procesado correctamente. ¡Gracias por ayudar al ponente!</p>
       <button onclick="location.reload()" class="submit-btn" style="background: var(--text-main); width: auto; padding: 12px 30px; font-size: 1rem;">Evaluar a otro ponente</button>
     </div>
   </div>
@@ -237,7 +245,7 @@
     form.addEventListener('submit', e => {
       e.preventDefault();
       btn.disabled = true;
-      btn.innerText = 'Enviando datos... ⏳';
+      btn.innerText = 'Enviando... ⏳';
 
       fetch(form.action, {
         method: 'POST',
@@ -250,7 +258,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       })
       .catch(err => {
-        alert('Error al enviar. Revisa tu conexión.');
+        alert('Hubo un error al enviar. Revisa tu conexión.');
         btn.disabled = false;
         btn.innerText = 'Enviar Evaluación 🚀';
       });
