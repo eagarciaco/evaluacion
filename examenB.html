@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Bioseguridad B - Laboratorio TFD</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .step { display: none; }
+        .step.active { display: block; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+        .opciones-header { background: #ebf5fb; padding: 15px; border-radius: 6px; font-weight: bold; margin-bottom: 20px; border: 1px solid #d6eaf8; font-size: 0.95em; }
+        .pregunta-caja { margin-bottom: 20px; padding: 15px; background: #fff; border: 1px solid #eee; border-radius: 8px; }
+        select, input[type="text"], input[type="email"] { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
+        button { background: #3498db; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 20px; font-weight: bold; }
+        button:hover { background: #2980b9; }
+        .label-bp { display: block; margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <form id="examenForm">
+        <input type="hidden" name="version" value="B">
+
+        <div class="step active" id="step0">
+            <h2>EXAMEN DE BIOSEGURIDAD - VERSIÓN B</h2>
+            <p>Por favor, ingrese sus datos. Al avanzar de sección, no podrá regresar.</p>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <button type="button" onclick="cambiarPaso(0, 1)">Comenzar Examen</button>
+        </div>
+
+        <div class="step" id="step1">
+            <h2>Medidas de bioseguridad y equipos de protección</h2>
+            <div class="opciones-header">
+                A) Medidas de protección primarias, B) Barreras de protección secundarias, C) Ambas, D) Normas generales de bioseguridad, E) Ninguna de las anteriores
+            </div>
+            <div class="pregunta-caja"><p>1. El diseño de instalaciones separadas del acceso público en el laboratorio es una:</p>
+            <select name="p1" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>2. Contar con ventilación especializada y flujo de aire controlado se considera:</p>
+            <select name="p2" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>3. El uso de gafas de plástico o caretas al manipular sustancias corrosivas es una:</p>
+            <select name="p3" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>4. Mantener el cabello recogido o corto en el laboratorio es una medida de:</p>
+            <select name="p4" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>5. No pipetear con la boca y usar peras de plástico o pipetas automáticas es una:</p>
+            <select name="p5" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(1, 2)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step2">
+            <h2>Manejo de derrames, accidentes y emergencias</h2>
+            <div class="opciones-header">
+                A) Derrame biológico, B) Derrame químicos ácidos, C) Derrame químicos alcalinos, D) Salpicadura ojos/piel, E) Quemadura/intoxicación química
+            </div>
+            <div class="pregunta-caja"><p>6. Se lava con abundante agua corriente y se neutraliza con bicarbonato de sodio:</p>
+            <select name="p6" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>7. Se aplica agua corriente por al menos 10 minutos sin frotar:</p>
+            <select name="p7" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>8. En caso de inhalación de productos químicos, se debe llevar a la persona a un sitio con aire fresco:</p>
+            <select name="p8" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>9. Si el producto ingerido es corrosivo, no se provoca el vómito:</p>
+            <select name="p9" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>10. Se lava con agua y jabón si es herida leve por salpicadura de material potencialmente infectante:</p>
+            <select name="p10" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(2, 3)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step3">
+            <h2>Niveles de bioseguridad y agentes de riesgo</h2>
+            <div class="opciones-header">A) NBS-1, B) NBS-2, C) NBS-3, D) NBS-4, E) No corresponde</div>
+            <div class="pregunta-caja"><p>11. Escherichia coli y Candida albicans se manejan en:</p>
+            <select name="p11" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>12. Se requiere ropa especial, acceso controlado y flujo direccional del aire en:</p>
+            <select name="p12" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>13. Fibroblastos dérmicos humanos ATCC se trabajan normalmente en:</p>
+            <select name="p13" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>14. Requiere cámaras de seguridad biológica Clase II/III y trajes presurizados:</p>
+            <select name="p14" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>15. Penicillium roqueforti se maneja en:</p>
+            <select name="p15" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(3, 4)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step4">
+            <h2>Normas, procedimientos y gestión</h2>
+            <div class="opciones-header">A) Normas generales, B) Desechos biológicos, C) Desechos químicos, D) Recomendaciones, E) Condiciones especiales</div>
+            <div class="pregunta-caja"><p>16. Los desechos biológicos deben ser descontaminados antes de su recolección:</p>
+            <select name="p16" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>17. Preparar stocks de soluciones periódicamente y en cantidades necesarias es una:</p>
+            <select name="p17" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>18. No detener manualmente la centrífuga ni destaparla antes de que deje de girar es una:</p>
+            <select name="p18" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>19. Los tubos que se introducen en la centrífuga deben ir tapados:</p>
+            <select name="p19" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(4, 5)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step5">
+            <h2>Procedimientos y cuidados generales de equipos</h2>
+            <div class="opciones-header">A) Autoclave, B) Microscopio, C) Incubadora, D) Medidor de pH, E) Baño María</div>
+            <div class="pregunta-caja"><p>20. ¿En qué equipo es importante evitar cambios bruscos de temperatura ambiental?</p>
+            <select name="p20" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>21. ¿En qué equipo es fundamental que el electrodo se mantenga húmedo?</p>
+            <select name="p21" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>22. ¿Qué equipo tiene elementos ópticos que requieren limpieza especial con papel óptico?</p>
+            <select name="p22" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(5, 6)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step6">
+            <h2>Manejo y precauciones específicas</h2>
+            <div class="opciones-header">A) Autoclave, B) Centrífuga, C) Campana de flujo laminar, D) Agitador Vortex, E) Micropipeta</div>
+            <div class="pregunta-caja"><p>23. ¿En qué equipo es crucial prenderlo con anticipación y dejar circular aire por 5 minutos?</p>
+            <select name="p23" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>24. ¿Qué equipo se recomienda almacenarlo en posición vertical cuando no esté en uso?</p>
+            <select name="p24" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>25. ¿En qué equipo se debe encender la luz UV por al menos 15 minutos antes de trabajar?</p>
+            <select name="p25" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(6, 7)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step7">
+            <h2>Mantenimiento y limpieza</h2>
+            <div class="opciones-header">A) Microscopio, B) Incubadora, C) Balanza granataria, D) Autoclave, E) Medidor de pH</div>
+            <div class="pregunta-caja"><p>26. ¿En qué equipo se recomienda lubricar periódicamente sus componentes mecánicos?</p>
+            <select name="p26" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>27. ¿Qué equipo necesita que se limpie el electrodo después de cada medición?</p>
+            <select name="p27" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>28. ¿Qué equipo debe calibrarse periódicamente para garantizar mediciones precisas de pH?</p>
+            <select name="p28" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>29. ¿En qué equipo se deben limpiar los elementos ópticos externos para remover polvo?</p>
+            <select name="p29" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(7, 8)">Siguiente Sección</button>
+        </div>
+
+        <div class="step" id="step8">
+            <h2>Seguridad y recomendaciones de uso</h2>
+            <div class="opciones-header">A) Autoclave, B) Centrífuga, C) Campana de flujo laminar, D) Baño María, E) Agitador Vortex</div>
+            <div class="pregunta-caja"><p>30. ¿Qué equipo requiere el uso de guantes de protección térmica al retirar material?</p>
+            <select name="p30" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>31. ¿En qué equipo es necesario equilibrar correctamente los tubos antes de activarlo?</p>
+            <select name="p31" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <div class="pregunta-caja"><p>32. ¿En qué equipo se debe verificar que la puerta esté bien sellada antes de esterilizar?</p>
+            <select name="p32" required><option value="">Seleccione...</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+            <button type="button" onclick="cambiarPaso(8, 9)">Siguiente Sección (Abiertas)</button>
+        </div>
+
+        <div class="step" id="step9">
+            <h2>Buenas prácticas en el laboratorio</h2>
+            <p>Mencione 4 buenas prácticas para el trabajo en el laboratorio de TFD y cultivo celular:</p>
+            <div class="pregunta-caja">
+                <span class="label-bp">33.</span> <input type="text" name="bp1" required>
+                <span class="label-bp">34.</span> <input type="text" name="bp2" required>
+                <span class="label-bp">35.</span> <input type="text" name="bp3" required>
+                <span class="label-bp">36.</span> <input type="text" name="bp4" required>
+            </div>
+            <button type="button" id="btnEnviar" onclick="enviarExamen()">Finalizar y Enviar Examen B</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const URL_SCRIPT = 'https://script.google.com/macros/s/AKfycby51KlpO_xht7RAYt49CgSWX_b-Lek_cOK3vRBe3Pq4kyluDBGM4Z13FakDDeKd7Xc/exec';
+
+    function cambiarPaso(actual, siguiente) {
+        const inputs = document.querySelectorAll(`#step${actual} select, #step${actual} input`);
+        for (let i of inputs) {
+            if (i.hasAttribute('required') && !i.value) {
+                alert("Por favor, responda todas las preguntas de esta sección.");
+                return;
+            }
+        }
+        document.getElementById('step' + actual).style.display = 'none';
+        document.getElementById('step' + siguiente).style.display = 'block';
+        window.scrollTo(0, 0);
+        history.pushState(null, null, location.href);
+    }
+
+    async function enviarExamen() {
+        const btn = document.getElementById('btnEnviar');
+        const form = document.getElementById('examenForm');
+        
+        const inputsFinales = document.querySelectorAll('#step9 input');
+        for (let i of inputsFinales) { if(!i.value) { alert("Complete las 4 buenas prácticas."); return; } }
+
+        btn.disabled = true; btn.innerText = "Enviando...";
+        
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        try {
+            await fetch(URL_SCRIPT, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) });
+            document.querySelector('.card').innerHTML = "<h2>¡Enviado!</h2><p>Tus respuestas del Examen Versión B han sido registradas. El profesor recibirá el reporte.</p>";
+        } catch (e) {
+            alert("Error al enviar. Intenta de nuevo.");
+            btn.disabled = false; btn.innerText = "Reintentar";
+        }
+    }
+    window.onpopstate = function() { history.go(1); };
+</script>
+</body>
+</html>
